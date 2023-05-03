@@ -13,9 +13,6 @@
 		}
 	],
 	"type": "wordpress-plugin",
-	"autoload": {
-		"files": ["titan-framework.php"]
-	},
 	"repositories": [
 	],
 	"require": {
