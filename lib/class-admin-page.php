@@ -80,12 +80,18 @@ class TitanFrameworkAdminPage {
 	}
 
 	public function createAdminPanel( $settings ) {
-		$settings['parent'] = $this->settings['id'];
+		if ( isset( $this->settings['id'] ) ) {
+			$settings['parent'] = $this->settings['id'];
+		}
+		
 		return $this->owner->createAdminPanel( $settings );
 	}
 
 	public function createSampleContentPage( $settings ) {
-		$settings['parent'] = $this->settings['id'];
+		if ( isset( $this->settings['id'] ) ) {
+			$settings['parent'] = $this->settings['id'];
+		}
+
 		return $this->owner->createSampleContentPage( $settings );
 	}
 
